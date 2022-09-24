@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/index.scss';
+import React from "react";
+import PostList from "./components/PostList";
+import MyButton from './components/UI/button/MyButton';
+import MyInput from './components/UI/input/MyInput';
 
 function App() {
+
+  const [post, setPost] = React.useState([
+    { id: 1, title: "Java1", body: "Description" },
+    { id: 2, title: "Java2", body: "Description" },
+    { id: 3, title: "Java3", body: "Description" }
+  ])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <form>
+        <MyInput type="text" placeholder='Заголовок'/>
+        <MyInput type="text" placeholder='Опис'/>
+        <MyButton>Створити пост</MyButton>
+      </form>
+      <PostList post={post} title={"Пости Java"} />
+
     </div>
   );
 }
