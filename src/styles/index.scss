@@ -19,11 +19,31 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: 1px solid black;
+        border: 1px solid teal;
         border-radius: 20px;
         padding: 20px;
         margin: 0 0 20px 0;
     }
 
     &__btn {}
+}
+
+.post-enter {
+    transform: translateX(-350px);
+
+}
+
+.post-enter-active {
+    transform: translateX(0px);
+
+    transition: all 500ms ease-in;
+}
+
+.post-exit {
+    opacity: 1;
+}
+
+.post-exit-active {
+    transform: translateX(350px);
+    transition: all 500ms ease-in;
 }
