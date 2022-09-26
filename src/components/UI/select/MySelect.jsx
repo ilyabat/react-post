@@ -1,8 +1,8 @@
 import React from 'react'
-
+import './MySelect.scss'
 const MySelect = ({ option, defaultValue, value, onChange }) => {
     return (
-        <div>
+        <div className='select'>
             <select value={value}
             onChange={event => onChange(event.target.value)}
             >

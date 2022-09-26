@@ -24,8 +24,17 @@
         padding: 20px;
         margin: 0 0 20px 0;
     }
-
+    &__block-btn{
+        margin: 0 0 0 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     &__btn {}
+
+    &__btn-open {
+        margin: 0 0 10px 0;
+    }
 }
 
 .post-enter {
@@ -46,4 +55,44 @@
 .post-exit-active {
     transform: translateX(350px);
     transition: all 500ms ease-in;
+}
+
+.page__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 20px 0;
+}
+
+.page {
+    border-bottom: 1px solid teal;
+    cursor: pointer;
+
+    &:not(:last-child) {
+        margin: 0 20px 0 0;
+    }
+}
+
+.page__current {
+    font-weight: bold;
+}
+
+.header {
+
+    height: 50px;
+    width: 100%;
+    padding: 10px 15px;
+    background: lightgray;
+
+    &__container {
+        width: 900px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    a {
+        margin: 0 20px 0 0;
+    }
 }
