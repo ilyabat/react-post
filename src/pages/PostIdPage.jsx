@@ -26,21 +26,28 @@ const PostIdPage = () => {
     }, [])
     return (
         <div className='wrapper'>
-            <h1>id = {params.id}</h1>
             {isLoading
-                ? <Loader />
-                : <div>{post.id}. {post.title} </div>
+                ? <div className='loader'>
+                    <Loader />
+                </div>
+                : <div className='comments-post'>
+                    <div className='comments-post__title'>{post.title}</div>
+                    <div className='comments-post__body'>{post.body}</div>
+                </div>
+
             }
-            <h1>Коментарі</h1>
+            <h1 className='com'>Коментарі</h1>
             {isComLoading
                 ?
-                <Loader />
+                <div className='loader'>
+                    <Loader />
+                </div>
                 :
                 <div>
                     {comments.map(comm =>
-                        <div key={comm.id}>
-                            <h5>{comm.email}</h5>
-                            <div>{comm.body}</div>
+                        <div className='comments' key={comm.id}>
+                            <h5 className='comments__email'>{comm.email}</h5>
+                            <div className='comments__body'>{comm.body}</div>
                         </div>
                     )}
                 </div>

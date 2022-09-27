@@ -12,9 +12,9 @@ const Header = () => {
     return (
         <header className='header'>
             <div className='header__container'>
-                <div>
+                <a href='#' className='header__logo'>
                     PostJSON
-                </div>
+                </a>
                 <div className="header__items">
                     <Link to="/about">Про сайт</Link>
                     <Link to="/post">Пости</Link>
