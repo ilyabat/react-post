@@ -8,17 +8,24 @@ const Login = () => {
     const login = event => {
         event.preventDefault()
         setIsAuth(true)
-        localStorage.setItem('auth','true')
+        localStorage.setItem('auth', 'true')
 
     }
     return (
         <div className='wrapper'>
-            <h1>Сторінка логіна</h1>
-            <form onSubmit={login}>
-                <MyInput type="text" placeholder='Login' />
-                <MyInput type="password" placeholder='Password' />
-                <MyButton>Вхід</MyButton>
-            </form>
+            <div className="login">
+                <h1>Сторінка логіна</h1>
+                <p>Для того щоб ввійти просто нажміть вхід</p>
+                <form onSubmit={login}>
+                    <MyInput type="text" placeholder='Login' />
+                    <MyInput type="password" placeholder='Password' />
+                    <div className="login__btn">
+                        <MyButton>Вхід</MyButton>
+
+                    </div>
+                </form>
+            </div>
+
         </div>
     )
 }
